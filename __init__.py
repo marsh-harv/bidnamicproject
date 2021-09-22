@@ -4,8 +4,8 @@ from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 
 def on_created(event):
-     df = pd.read_csv(event.src_path, encoding="utf-16", engine="python", error_bad_lines=False)
-     print(df.)
+     df = pd.read_csv(event.src_path, encoding="utf-16", engine="python", delimiter="\t")
+     print(df)
 
 if __name__ == "__main__":
     patterns = ["*"]
